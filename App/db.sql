@@ -16,3 +16,6 @@ CREATE TABLE todos (
 	user_id int not null,
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+//Markus smird
