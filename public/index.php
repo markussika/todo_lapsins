@@ -2,5 +2,5 @@
 
 session_start();
 
-require "functions.php";
-require "router.php";
+require "../app/core/functions.php";
+require "../app/core/router.php";
