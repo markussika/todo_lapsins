@@ -17,10 +17,3 @@ CREATE TABLE todos (
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-
-<<<<<<< HEAD
-//Markus smird
-
-=======
-//Markus smirdcds
->>>>>>> b4d585e36b31c73e1cf472c09cc74a011cab24b5
