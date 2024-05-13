@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db->execute($query, $params);
 
     $_SESSION["flash"] = "Tu esi veiksmīgi reģistrēts";
-    header("Location: /Login");
+    header("Location: /login");
     die();
   }
 }
