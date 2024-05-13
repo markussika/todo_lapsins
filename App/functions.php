@@ -14,7 +14,7 @@ function auth() {
   }
 }
 function admin() {
-  if ($_SESSION["user"] === "admin") {
+  if ($_SESSION["user"] !== "admin") {
     // Redirect to an unauthorized page or display an error message
     header("Location: /");
     die(); // Terminate script execution
