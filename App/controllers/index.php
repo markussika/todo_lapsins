@@ -2,4 +2,4 @@
 
 
 
-require "../views/index.view.php";
+require "../App/views/index.view.php";
