@@ -18,5 +18,9 @@ CREATE TABLE todos (
 );
 
 
+<<<<<<< HEAD
 //Markus smird
--- gustavam smirdigas pedas un vins pedas rive uz desmaizitem
+
+=======
+//Markus smirdcds
+>>>>>>> b4d585e36b31c73e1cf472c09cc74a011cab24b5
