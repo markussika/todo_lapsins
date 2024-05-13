@@ -19,3 +19,4 @@ CREATE TABLE todos (
 
 
 //Markus smird
+-- gustavam smirdigas pedas un vins pedas rive uz desmaizitem
