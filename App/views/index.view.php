@@ -8,5 +8,6 @@
 <body>
     <h1>Hey</h1>
     <a href="/register">register</a>
+    <a href="/login">Login</a>
 </body>
 </html>
