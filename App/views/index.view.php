@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Hey</h1>
+    <a href="/register">register</a>
 </body>
 </html>
