@@ -2,7 +2,7 @@
 
 return [
   "host" => "localhost",
-  "dbname" => "books_ms",
+  "dbname" => "todo",
   "user" => "root",
   "password" => "",
   "charset" => "utf8mb4"
