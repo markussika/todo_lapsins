@@ -1,36 +1,18 @@
--- CREATE DATABASE books_ms;
+CREATE DATABASE todo_13;
 
-USE books_ms;
-/*
-CREATE TABLE catalog(
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	name VARCHAR(200) NOT NULL,
-	authbooks_msor VARCHAR(100) NOT NULL,
-    release_year INT NOT NULL,
-    availability INT NOT NULL
-)
-*/
-/*
-CREATE TABLE users(
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+USE todo_13;
 
-)
-*/
-/*
-INSERT INTO catalog
-(id, name, autor, release_year, availability)
-VALUE 
-(1, "Gustaba dzive", gustavs, 07-11-2006, 420);
-*/
--- ALTER TABLE catalog RENAME COLUMN autor TO author;
-/*
-CREATE TABLE users(
-userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(255),
-password VARCHAR(255)
-)
-*/
-CREATE TABLE reserved(
-id 
-)
+CREATE TABLE users (
+	id int not null auto_increment primary key,
+	username varchar(255) not null,
+	password varchar(255) not null
+);
 
+CREATE TABLE todos (
+	id int not null auto_increment primary key,
+	name varchar(255) not null,
+	description TEXT not null,
+	due date not null,
+	user_id int not null,
+	FOREIGN KEY (user_id) REFERENCES users(id)
+);
