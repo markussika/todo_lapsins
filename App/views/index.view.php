@@ -2,7 +2,7 @@
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<?= $todos : "hey" ?>
+<?= $todos ?? "hey" ?>
 <table>
   <thead>
     <tr>
