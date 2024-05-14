@@ -14,6 +14,7 @@
   <tbody>
       <?php foreach ($todos as $todo) { ?>
         <tr>
+            
             <td><?= $todo["name"] ?></td>
             <td><?= $todo["description"] ?></td>
             <td><?= $todo["due"] ?></td>
