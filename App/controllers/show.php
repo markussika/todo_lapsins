@@ -14,7 +14,7 @@ $params = [":id" => $_GET["id"]];
 
 $todos = $db->execute($query, $params)->fetch();
 
-$title = htmlspecialchars($catalog["name"]) ;
+$title = htmlspecialchars($todos["name"]) ;
 
 
 require "../App/views/show.view.php";
