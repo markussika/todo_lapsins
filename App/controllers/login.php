@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($errors)) {
     $_SESSION["user"] = true;
     $_SESSION["username"] = $_POST["username"];
+    $_SESSION["user_id"] = $user["id"];
 
     header("Location: /");
     die();
