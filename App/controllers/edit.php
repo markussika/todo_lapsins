@@ -1,46 +1,36 @@
 <?php
-require "Validator.php";
-require "Database.php";
-$config = require("config.php");
-$db = new Database($config);
+require "../App/core/Validator.php";
+require "../App/core/Database.php";
+auth();
+$config = require("../App/config.php");
 
-$query = "SELECT * FROM posts WHERE id = :id";
-$params = [
-    ":id" => $_GET["id"]
-];
-
-//if ($_SERVER["REQUEST_METHOD"] == "POST" && trim($_POST["title"]) != "" && $_POST["category-id"] <= 3 && strlen($_POST["title"]) <= 255) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $errors = [];
+    $db = new Database($config);
+    $errors = [];
 
-  if (!Validator::string($_POST["title"],min: 1, max: 255)) {
-    $errors["title"] = "Title cannot be empty";
-  }
-
-  if (strlen($_POST["title"]) > 255) {
-    $errors["title"] = "Title too long";
-  }
-  if(!Validator::number($_POST["category_id"], min: 1, max: 3)) {
-    $errors["category_id"] = "Category ID invalid";
-  }
-
-  if (empty($errors)) {
-    $query = "UPDATE posts SET title = :title, category_id = :category_id WHERE id = :id;";
-    $params = [
-        ":id" => $_POST["id"],
-        ":title" => $_POST["title"],
-        ":category_id" => $_POST["category_id"]
-    ];
-    $db->execute($query, $params);
-
-    header("Location: /");
-    die();
-  }
-
-  
+    if(!Validator::string($_POST["name"])){
+        $errors["name"] = "Name incorrect";
+    }
+    if(!Validator::string($_POST["description"])){
+        $errors["description"] = "Description incorrect";
+    }
+    if(!Validator::string($_POST["due"])){
+        $errors["due"] = "Due date incorrect";
+    }
+    if(empty($errors)){
+        $query = "UPDATE todos SET name = :name, description = :description, due = :due, user_id = :user_id WHERE id = :id;";
+        $params = [
+            ":name" => $_POST["name"],
+            ":description" => $_POST["description"],
+            ":due" => $_POST["due"],
+            ":user_id" => $_SESSION["user_id"]
+        ];
+        $db->execute($query, $params);
+    
+        header("Location: /");
+        die();
+    }
 }
 
-$post = $db->execute($query, $params)->fetch();
-
-$title = "Create a Post";
-require "views/posts/edit.view.php";
+$title = "Edit";
+require "../App/views/edit.view.php";
