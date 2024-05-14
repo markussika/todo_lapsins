@@ -12,7 +12,7 @@ $db = new Database($config);
 $query = "SELECT * FROM todos WHERE id = :id";
 $params = [":id" => $_GET["id"]];
 
-$catalog = $db->execute($query, $params)->fetch();
+$todos = $db->execute($query, $params)->fetch();
 
 $title = htmlspecialchars($catalog["name"]) ;
 
