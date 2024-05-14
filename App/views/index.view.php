@@ -2,7 +2,7 @@
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<?= empty($todos) ? "hey" : "no" ?>
+<?php if(!empty($todos)){ ?>
 <table>
   <thead>
     <tr>
@@ -21,5 +21,7 @@
       <?php } ?>
   </tfoot>
 </table>
-
+<?php } else { ?>
+    <p>NO TODOS</p>
+<?php } ?>
 <?php require "../App/views/components/footer.php" ?>
