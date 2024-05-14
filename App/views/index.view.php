@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hey</h1>
+    <h1>Hey index</h1>
     <a href="/register">register</a>
     <a href="/login">Login</a>
 </body>
