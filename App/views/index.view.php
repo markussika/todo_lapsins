@@ -2,7 +2,7 @@
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<?= $todos === [] ?? "hey" ?>
+<?= empty($todos) ? "hey" : "no" ?>
 <table>
   <thead>
     <tr>
