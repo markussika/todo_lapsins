@@ -9,4 +9,7 @@ $routes = require "../App/routes.php";
 
 if (array_key_exists($url, $routes)) {
   require $routes[$url];
-} ;
+}else
+{
+  require "../App/views/404.view.php";
+};
