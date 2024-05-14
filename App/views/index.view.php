@@ -2,6 +2,7 @@
 <?php require "../App/views/components/navbar.php" ?>
 
 
+<?= var_dump($todos) ?>
 <table>
   <thead>
     <tr>
