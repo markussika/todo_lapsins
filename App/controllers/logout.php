@@ -1,7 +1,7 @@
 <?php
 
-$_SESSION["user"] = false;
+session_abort();
 
 
 
-header("Location: /login");
+header("Location: /");
