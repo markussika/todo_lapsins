@@ -18,8 +18,8 @@ td {
 }
 
 table {
-  border-collapse: collapse;
-  margin: 10px 0px;
+  border-collapse: separate;
+  border-spacing: 0 1em;
 }
 
 .actions-index {
@@ -47,9 +47,9 @@ table {
 }
 
 .not-com {
-  border-left: 5px solid red;
+  border-left: 10px solid red;
 }
 
 .com {
-  border-left: 5px solid green;
+  border-left: 10px solid green;
 }

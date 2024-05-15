@@ -16,10 +16,10 @@
   <tbody>
       <?php foreach ($todos as $todo) { ?>
           <tr>
-              <td  class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>"><?= $todo["name"] ?></td>
-              <td><?= $todo["description"] ?></td>
-              <td><?= $todo["due"] ?></td>
-              <td><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></td>
+              <td class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>"><div><?= $todo["name"] ?></div></td>
+              <td><div><?= $todo["description"] ?></div></td>
+              <td><div><?= $todo["due"] ?></div></td>
+              <td><div><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></div></td>
               <td><div class="actions-index">
               <form action="/completed-checkbox" method="POST">
                 <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id" >
