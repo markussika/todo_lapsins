@@ -1,4 +1,5 @@
 <?php
+auth();
 require "../App/models/Todo.php";
 $config = require("../App/config.php");
 $model = new Todo();
