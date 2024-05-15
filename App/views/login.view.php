@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
-  <link rel="stylesheet" href="../public/styles/login.style.css">
-
-  
+<?php require "../App/views/components/head.php" ?>
 
 <?php require "../App/views/components/navbar.php" ?>
 
@@ -28,8 +20,7 @@
   <?php } ?>
         <input name="password" type="password" placeholder="Password" id="password">
         <input type="submit" name="login-btn" value="Login">
-           
-        
+        <a href="/register">Don't have an account?</a>
     </form>      
     </div>
     
