@@ -1,25 +1,37 @@
-<?php require "../App/views/components/head.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../public/styles/login.style.css">
+
+  
+
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<form method="POST">
-<h3>Register</h3>
-  <label>
-    username:
-    <input name="username" type="username" placeholder="Create username" id="username"/>
-  </label>
-  <?php if(isset($errors["username"])) {?>
-    <p><?= $errors["username"] ?></p>
+<div class="loginform">
+        
+        <form method="POST">
+        <h2>Register</h2>
+
+        <label for="username">Username:</label>
+        <?php if(isset($errors["username"])) {?>
+    <p class="error"><?= $errors["username"] ?></p>
   <?php } ?>
-  <label>
-    Password <span class="explanation">(jābūt 8 rakstzīmēm, 1 lielam, 1 mazam un 1 īpaša simbolam un 1 ciparam, good luck)</span>   :
-    <input name="password" type="password" placeholder="Create password" id="password"/>
-  </label>
-  <?php if(isset($errors["password"])) {?>
+        <input name="username" type="text" placeholder="Username" id="username">
+
+        <label for="password">Password:</label>
+        <?php if(isset($errors["password"])) {?>
     <p><?= $errors["password"] ?></p>
   <?php } ?>
-  <button>Register</button>
-</form>
+        <input name="password" type="password" placeholder="Password" id="password">
+        <input type="submit" name="login-btn" value="Register">
+        
+    </form>      
+    </div>
+    
 
 
 <?php require "../App/views/components/footer.php" ?>
