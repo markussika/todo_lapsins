@@ -8,7 +8,7 @@ class User{
         $config = require("../App/config.php");
         $this->db = new Database($config);
     }
-    public function all(){
+    static public function all(){
         $query = "SELECT * FROM users"; 
         $params = [];
         return $this->db->execute($query, $params)->fetchAll();

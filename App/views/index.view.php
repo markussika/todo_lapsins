@@ -20,7 +20,7 @@
                 <div class="td-wrapper"><?= $todo["name"] ?></div>
             </td>
             <td>
-                <div class="td-wrapper"><?= $todo["user_id"] ?></div>
+                <div class="td-wrapper"><?= $todo["username"] ?></div>
             </td>
             <td class="td-div">
                 <div class="td-wrapper">
