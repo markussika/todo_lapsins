@@ -47,9 +47,13 @@ table {
 }
 
 .not-com {
-  border-left: 10px solid red;
+  border-left: 8px solid red;
 }
 
 .com {
-  border-left: 10px solid green;
+  border-left: 8px solid green;
+}
+
+td:hover {
+  background-color: aqua;
 }
