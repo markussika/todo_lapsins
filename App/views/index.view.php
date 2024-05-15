@@ -31,7 +31,13 @@
                 </div>
             </td>
             <td>
-                <div class="td-wrapper"><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></div>
+                <div class="td-wrapper">
+                      <form action="/completed-checkbox" method="POST" class="checkbox-form">
+                          <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id"><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?>                
+                          <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?> name="completed-checkbox" onchange="this.form.method='post'; this.form.submit()">
+                      </form>
+                </div>
+                
             </td>
             <td>
                 <div class="actions-index td-wrapper">
