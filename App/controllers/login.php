@@ -1,5 +1,5 @@
 <?php
-
+guest();
 require "../App/core/Validator.php";
 require "../App/core/Database.php";
 $config = require("../App/config.php");

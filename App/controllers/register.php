@@ -1,5 +1,5 @@
 <?php
-
+guest();
 
 
 // Pieprasīt DB, config, Validator

@@ -1,10 +1,9 @@
 <?php
 require "../App/core/Validator.php";
-require "../App/core/Database.php";
+require "../App/models/Todo.php";
 auth();
-$config = require("../App/config.php");
-$db = new Database($config);
 
+$model = new Todo();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $errors = [];
@@ -19,24 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["due"] = "Due date incorrect";
     }
     if(empty($errors)){
-        $query = "UPDATE todos SET name = :name, description = :description, due = :due, completed = :completed WHERE id = :id;";
-        $params = [
-            ":name" => $_POST["name"],
-            ":description" => $_POST["description"],
-            ":due" => $_POST["due"],
-            ":completed" => 0,
-            ":id" => $_POST["id"]
-        ];
-        $db->execute($query, $params);
-    
+        $model->update();
         header("Location: /");
         die();
     }
 }
-
-$query = "SELECT * FROM todos WHERE id = :id";
-  $params = [":id" => $_GET["id"]];
-  $todos = $db->execute($query, $params)->fetch();
+$todos = $model->find();
 
 
 $title = "Edit";

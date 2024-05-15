@@ -113,6 +113,8 @@ tr:hover .p-wrapper {
   margin-bottom: 30px;
 }
 .loginform input[type="text"],
+input[type="date"],
+
 input[type="password"] {
   border: none;
   border-bottom: 1px solid #1e5220;
@@ -159,4 +161,34 @@ input[type="password"] {
     float: inherit !important;
     margin: 10px 0px;
   }
+}
+nav {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.navbarcol {
+  transition: transform 250ms;
+  color: honeydew;
+  text-decoration: none;
+}
+.navbarcol:hover {
+  transform: translateX(10px);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background: rgb(120, 66, 8);
+  border-bottom: 1px solid #000000;
+  
+}
+body{
+  padding-top: 50px
 }

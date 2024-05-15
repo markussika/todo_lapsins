@@ -25,4 +25,34 @@ require "../App/core/Database.php";
            
             $this->db->execute($query, $params);
         }
+        public function update(){
+            $query = "UPDATE todos SET name = :name, description = :description, due = :due, completed = :completed WHERE id = :id;";
+            $params = [
+                ":name" => $_POST["name"],
+                ":description" => $_POST["description"],
+                ":due" => $_POST["due"],
+                ":completed" => 0,
+                ":id" => $_POST["id"]
+            ];
+            $this->db->execute($query, $params);
+        }
+        public function find(){
+            $query = "SELECT * FROM todos WHERE id = :id";
+            $params = [":id" => $_GET["id"]];
+            return $this->db->execute($query, $params)->fetch();
+        }
+        public function all(){
+            $query = "SELECT * FROM todos"; 
+            $params = [];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
+        public function checkbox(){
+            isset($_POST['completed-checkbox']) ? $checked = 1 : $checked = 0;
+            $query = "UPDATE todos SET completed = :completed WHERE id = :id;";
+            $params = [
+                ":id" => $_POST["todo-id"],
+                ":completed" => $checked
+            ];
+            $this->db->execute($query, $params);
+        }
     }

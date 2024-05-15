@@ -1,15 +1,16 @@
 <?php require "../App/views/components/head.php" ?>
 <?php require "../App/views/components/navbar.php" ?>
-    <h1>Create</h1>
+<div class="loginform">
+    <h2>Create</h2>
     <form method="POST">
         <label>Name:
-            <input name="name" value="<?= $_POST["name"] ?? '' ?>">
+            <input type="text" placeholder="Name" name="name" value="<?= $_POST["name"] ?? '' ?>">
             <?php if(isset($errors["name"])) {?>
                 <div><p class="error"><?= $errors["name"]?></p></div>
             <?php } ?>
         </label>
         <label>Description:
-            <input name="description" value="<?= $_POST["description"] ?? '' ?>">
+            <input type="text" placeholder="Description" name="description" value="<?= $_POST["description"] ?? '' ?>">
             <?php if(isset($errors["description"])) {?>
                 <div><p class="error"><?= $errors["description"]?></p></div>
             <?php } ?>
@@ -20,6 +21,7 @@
                 <div><p class="error"><?= $errors["due"]?></p></div>
             <?php } ?>
         </label>
-        <button>Create</button>
+        <input type="submit" name="submit" value="Submit">
     </form>
+    </div>
 <?php require "../App/views/components/footer.php" ?>

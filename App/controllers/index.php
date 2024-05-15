@@ -1,16 +1,8 @@
 <?php
 
-require "../App/Core/Database.php";
-$config = require "../App/config.php";
+require "../App/models/Todo.php";
 
-
-$query = "SELECT * FROM todos"; 
-$params = [];
-$db = new DataBase($config);
-$todos = $db->execute($query, $params)->fetchAll();
-
-
-
-
+$model = new Todo();
+$todos = $model->all();
 $title = "Home page";
 require "../App/views/index.view.php";
