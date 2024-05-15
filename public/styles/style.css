@@ -83,6 +83,8 @@ td:hover {
   margin-bottom: 30px;
 }
 .loginform input[type="text"],
+input[type="date"],
+
 input[type="password"] {
   border: none;
   border-bottom: 1px solid #1e5220;
@@ -137,10 +139,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .navbarcol {
   transition: transform 250ms;
   color: honeydew;
+  text-decoration: none;
 }
 .navbarcol:hover {
   transform: translateX(10px);
@@ -153,6 +157,7 @@ header {
   height: 50px;
   background: rgb(120, 66, 8);
   border-bottom: 1px solid #000000;
+  
 }
 body{
   padding-top: 50px
