@@ -29,7 +29,7 @@
                   <button class="delete" name="id" value="<?= $todo["id"] ?>">Delete</button>
               </form>
               <form action="/edit">
-                  <Button name="id" value=" <?= $todo['id'] ?>">edit</Button>
+                  <Button name="id" value="<?= $todo['id'] ?>">edit</Button>
               </form>
             </div></td>
           </tr>
