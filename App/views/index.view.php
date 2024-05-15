@@ -16,7 +16,7 @@
   <tbody>
       <?php foreach ($todos as $todo) { ?>
           <tr>
-              <td  class="<?= $todo["completed"] == 1 ? "not-com" : "com" ?>"><?= $todo["name"] ?></td>
+              <td  class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>"><?= $todo["name"] ?></td>
               <td><?= $todo["description"] ?></td>
               <td><?= $todo["due"] ?></td>
               <td><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></td>
