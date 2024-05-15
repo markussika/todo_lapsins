@@ -3,6 +3,7 @@ require "../App/core/Database.php";
     class Todo{
         private $db;
         private $config;
+
         public function __construct(){
             $config = require("../App/config.php");
             $this->db = new Database($config);
@@ -16,6 +17,12 @@ require "../App/core/Database.php";
                 ":due" => $_POST["due"],
                 ":user_id" => $_SESSION["user_id"]
             ];
+            $this->db->execute($query, $params);
+        }
+        public function delete(){
+            $query = "DELETE FROM todos WHERE id = :id";
+            $params = [ ":id" => $_POST["id"]];
+           
             $this->db->execute($query, $params);
         }
     }
