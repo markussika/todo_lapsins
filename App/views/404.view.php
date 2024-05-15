@@ -2,6 +2,6 @@
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<p>Muļķis! Lapas nav</p>
-<p>404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 </p>
+<p class="error-alert">Muļķis! Lapas nav</p>
+<p class="error">404</p>
 <?php require "../App/views/components/footer.php" ?>
