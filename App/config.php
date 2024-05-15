@@ -4,6 +4,6 @@ return [
   "host" => "localhost",
   "dbname" => "todo_13",
   "user" => "root",
-  "password" => "root",
+  "password" => "",
   "charset" => "utf8mb4"
 ];
