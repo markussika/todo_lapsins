@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $db->execute($query, $params);
 }
 
+$title = "Destroy";
 header("Location: /");
 die();
 

@@ -12,4 +12,5 @@ $todos = $db->execute($query, $params)->fetchAll();
 
 
 
+$title = "Home page";
 require "../App/views/index.view.php";
