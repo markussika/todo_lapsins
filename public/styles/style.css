@@ -12,7 +12,8 @@ body {
 
 td {
   /* display: flex; */
-  background-color: rgb(174, 174, 174);
+  /* background-color: rgb(174, 174, 174); */
+  background-color: rgb(225, 225, 225);
   text-align: center;
   width: 20vw;
   height: 8vh;
@@ -88,6 +89,10 @@ tr:hover .p-wrapper {
   font-weight: 600;
 }
 
+.checkbox-form {
+  position: relative;
+}
+
 .loginform {
   background: #ffffff;
   width: 450px;
@@ -114,7 +119,6 @@ tr:hover .p-wrapper {
 }
 .loginform input[type="text"],
 input[type="date"],
-
 input[type="password"] {
   border: none;
   border-bottom: 1px solid #1e5220;
@@ -169,7 +173,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 .navbarcol {
   transition: transform 250ms;
@@ -187,8 +190,7 @@ header {
   height: 50px;
   background: rgb(120, 66, 8);
   border-bottom: 1px solid #000000;
-  
 }
-body{
-  padding-top: 50px
+body {
+  padding-top: 50px;
 }
