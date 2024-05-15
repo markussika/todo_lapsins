@@ -30,12 +30,10 @@ class Validator {
     $uppercaseRegex = '/[A-Z]/';
     $lowercaseRegex = '/[a-z]/';
     $numberRegex = '/[0-9]/';
-    $specialCharRegex = '/[!@#$%^&*()\-_=+{};:,<.>]/';
 
     return  strlen($data) >= $minLength &&
             preg_match($uppercaseRegex, $data) &&
             preg_match($lowercaseRegex, $data) &&
-            preg_match($numberRegex, $data) &&
-            preg_match($specialCharRegex, $data);
+            preg_match($numberRegex, $data);
  }
 }
