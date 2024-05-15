@@ -1,11 +1,11 @@
 <?php
 require "../App/core/Validator.php";
-require "../App/core/Database.php";
+require "../App/models/Todo.php";
 auth();
-$config = require("../App/config.php");
+
+$model = new Todo();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = new Database($config);
     $errors = [];
 
     if(!Validator::string($_POST["name"],min: 1, max: 255)){
@@ -18,16 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["due"] = "Due date incorrect";
     }
     if(empty($errors)){
-        $query = "INSERT INTO todos (name, description, due, user_id) 
-        VALUES (:name, :description, :due, :user_id);";
-        $params = [
-            ":name" => $_POST["name"],
-            ":description" => $_POST["description"],
-            ":due" => $_POST["due"],
-            ":user_id" => $_SESSION["user_id"]
-        ];
-        $db->execute($query, $params);
-    
+        $model->create();
         header("Location: /");
         die();
     }
