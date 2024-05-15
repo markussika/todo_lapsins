@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Due by</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +20,7 @@
         </a></td>
               <td><?= $todo["description"] ?></td>
               <td><?= $todo["due"] ?></td>
-            
+              <td><?= $todo["completed"] ?></td>
           </tr>
       <?php } ?>
   </tfoot>
