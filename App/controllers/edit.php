@@ -19,11 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["due"] = "Due date incorrect";
     }
     if(empty($errors)){
-        $query = "UPDATE todos SET name = :name, description = :description, due = :due WHERE id = :id;";
+        $query = "UPDATE todos SET name = :name, description = :description, due = :due, completed = :completed WHERE id = :id;";
         $params = [
             ":name" => $_POST["name"],
             ":description" => $_POST["description"],
-            ":due" => $_POST["due"]
+            ":due" => $_POST["due"],
+            ":completed" => 0,
+            ":id" => $_POST["id"]
         ];
         $db->execute($query, $params);
     
