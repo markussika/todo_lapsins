@@ -14,9 +14,7 @@
   <tbody>
       <?php foreach ($todos as $todo) { ?>
           <tr>
-              <td>
-        <a href="/show?id=<?= $todo["id"] ?>"><?= $todo["name"] ?>
-        </a></td>
+              <td><?= $todo["name"] ?></td>
               <td><?= $todo["description"] ?></td>
               <td><?= $todo["due"] ?></td>
             
