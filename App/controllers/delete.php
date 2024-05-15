@@ -1,14 +1,9 @@
 <?php
-require "../App/core/Database.php";
+require "../App/models/Todo.php";
 $config = require("../App/config.php");
-
-$db = new Database($config);
+$model = new Todo();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-  $query = "DELETE FROM todos WHERE id = :id";
-  $params = [ ":id" => $_POST["id"]];
- 
-  $db->execute($query, $params);
+  $model->delete();
 }
 
 $title = "Destroy";

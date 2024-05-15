@@ -23,6 +23,6 @@ require "../App/core/Database.php";
             $query = "DELETE FROM todos WHERE id = :id";
             $params = [ ":id" => $_POST["id"]];
            
-            $db->execute($query, $params);
+            $this->db->execute($query, $params);
         }
     }
