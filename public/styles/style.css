@@ -15,11 +15,12 @@ td {
   background-color: rgb(174, 174, 174);
   text-align: center;
   width: 20vw;
+  height: 8vh;
 }
 
 table {
   border-collapse: separate;
-  border-spacing: 0 1em;
+  border-spacing: 0 5px;
 }
 
 .actions-index {
@@ -54,8 +55,37 @@ table {
   border-left: 8px solid green;
 }
 
-td:hover {
-  background-color: aqua;
+.td-wrapper {
+  position: relative;
+}
+.p-description {
+  line-break: auto;
+  word-break: break-all;
+}
+
+.p-wrapper {
+  position: absolute;
+  text-align: left;
+  width: 19vw;
+  margin-top: 3vh;
+  line-break: auto;
+  backdrop-filter: blur(20px);
+  border-radius: 4px;
+  padding: 3px;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+tr:hover .p-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.description-title {
+  font-size: smaller;
+  font-weight: 600;
 }
 
 .loginform {
