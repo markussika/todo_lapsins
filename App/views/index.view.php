@@ -9,7 +9,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Due by</th>
-      <th>Completed</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
