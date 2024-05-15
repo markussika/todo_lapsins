@@ -1,14 +1,20 @@
-<?php require "../App/views/components/head.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="../public/styles/login.style.css">
+
+  
+
 <?php require "../App/views/components/navbar.php" ?>
 
 
-<div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+<div class="loginform">
         
-    </div>
-    <form method="POST">
-        <h3>Login</h3>
+        <form method="POST">
+        <h2>Login</h2>
 
         <label for="username">Username:</label>
         <?php if(isset($errors["username"])) {?>
@@ -21,13 +27,12 @@
     <p><?= $errors["password"] ?></p>
   <?php } ?>
         <input name="password" type="password" placeholder="Password" id="password">
-
-        <button>Log In</button>
+        <input type="submit" name="login-btn" value="Login">
+            <a href="#">Forgot your password?</a>
         
-    </form>
-    <?php if(isset($_SESSION["flash"])) { ?>
-  <p class="flash"><?= $_SESSION["flash"] ?></p>
-<?php } ?>
+    </form>      
+    </div>
+    
 
 
 <?php require "../App/views/components/footer.php" ?>
