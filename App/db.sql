@@ -13,6 +13,7 @@ CREATE TABLE todos (
 	name varchar(255) not null,
 	description TEXT not null,
 	due date not null,
+	completed boolean not null DEFAULT false,
 	user_id int not null,
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
