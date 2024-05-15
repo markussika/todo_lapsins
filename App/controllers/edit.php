@@ -3,9 +3,10 @@ require "../App/core/Validator.php";
 require "../App/core/Database.php";
 auth();
 $config = require("../App/config.php");
+$db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = new Database($config);
+    
     $errors = [];
 
     if(!Validator::string($_POST["name"])){
@@ -31,6 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die();
     }
 }
+
+$query = "SELECT * FROM todos WHERE id = :id";
+  $params = [":id" => $_GET["id"]];
+  $todos = $db->execute($query, $params)->fetch();
+
 
 $title = "Edit";
 require "../App/views/edit.view.php";
