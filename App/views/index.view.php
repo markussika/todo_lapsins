@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Due by</th>
+      <th>completed</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -18,7 +19,16 @@
               <td><?= $todo["name"] ?></td>
               <td><?= $todo["description"] ?></td>
               <td><?= $todo["due"] ?></td>
-              <td><?= $todo["completed"] ?></td>
+              <td><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></td>
+              <td><div>
+              <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?>>
+              <form class="delete-form" method="POST" action="/delete">
+                  <button class="delete" name="id" value="<?= $todo["id"] ?>">Delete</button>
+              </form>
+              <form action="/edit">
+                  <Button name="id" value=" <?= $todo['id'] ?>">edit</Button>
+              </form>
+            </div></td>
           </tr>
       <?php } ?>
   </tfoot>
