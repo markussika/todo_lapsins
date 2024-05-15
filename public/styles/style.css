@@ -3,4 +3,19 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: red;
+}
+
+td {
+  /* display: flex; */
+  background-color: rgb(174, 174, 174);
+  text-align: center;
+  width: 20vw;
+}
+
+.actions-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 299px;
 }

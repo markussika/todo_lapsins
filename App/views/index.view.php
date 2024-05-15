@@ -20,7 +20,7 @@
               <td><?= $todo["description"] ?></td>
               <td><?= $todo["due"] ?></td>
               <td><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></td>
-              <td><div>
+              <td><div class="actions-index">
               <form action="/completed-checkbox" method="POST">
                 <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id" >
                 <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?> name="completed-checkbox" onchange="this.form.method='post'; this.form.submit()" >
