@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
-</head>
-<body>
+<?php require "../App/views/components/head.php" ?>
+<?php require "../App/views/components/navbar.php" ?>
+
 
 <form method="POST">
 <h3>Register</h3>
@@ -26,5 +21,5 @@
   <button>Register</button>
 </form>
 
-</body>
-</html>
+
+<?php require "../App/views/components/footer.php" ?>
