@@ -3,7 +3,11 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: red;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 td {
@@ -13,9 +17,39 @@ td {
   width: 20vw;
 }
 
+table {
+  border-collapse: collapse;
+  margin: 10px 0px;
+}
+
 .actions-index {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 299px;
+  justify-content: space-around;
+  height: 8vh;
+}
+
+.actions-index > form > button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.delete-but {
+  color: red;
+}
+
+.edit-but {
+  color: blue;
+}
+
+.not-com {
+  border-left: 5px solid red;
+}
+
+.com {
+  border-left: 5px solid green;
 }
