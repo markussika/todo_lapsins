@@ -8,5 +8,6 @@ return [
   "/register" => "../App/controllers/register.php",
   "/logout" => "../App/controllers/logout.php",
   "/show" => "../App/controllers/show.php",
-  "/edit" => "../App/controllers/edit.php"
+  "/edit" => "../App/controllers/edit.php",
+  "/completed-checkbox" => "../App/controllers/completed-checkbox.php"
 ];
