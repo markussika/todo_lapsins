@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!Validator::string($_POST["description"],min: 1)){
         $errors["description"] = "Description incorrect";
     }
-    if(!Validator::date($_POST["due"])){
+    if(!Validator::string($_POST["due"], min:1)){
         $errors["due"] = "Due date incorrect";
     }
     if(empty($errors)){
