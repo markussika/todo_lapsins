@@ -28,7 +28,6 @@
   <?php } ?>
         <input name="password" type="password" placeholder="Password" id="password">
         <input type="submit" name="login-btn" value="Register">
-        
     </form>      
     </div>
     
