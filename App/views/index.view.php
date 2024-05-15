@@ -33,7 +33,9 @@
             <td>
                 <div class="td-wrapper">
                       <form action="/completed-checkbox" method="POST" class="checkbox-form">
-                          <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id"><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?>                
+                          <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id">
+                          <p><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></p>
+                          <p class="click-top-change-text">Click to change</p>               
                           <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?> name="completed-checkbox" onchange="this.form.method='post'; this.form.submit()">
                       </form>
                 </div>
