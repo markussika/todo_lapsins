@@ -18,17 +18,12 @@ class Validator {
              && $data >= $min
              && $data <= $max;
    }
-   static public function date($data, $min = '0000-01-01', $max = '9999-12-31') {
+   static public function date($data, $min = '0001-01-01', $max = '9999-12-31') {
         $data = trim($data);
-        $date = DateTime::createFromFormat('Y m d', $data);
-        $errors = DateTime::getLastErrors();
-    
-        if ($errors['warning_count'] + $errors['error_count'] > 0 || $date === false) {
-            return false;
-        }
-    
-        return $date->format('Y m d') >= $min && $date->format('Y m d') <= $max;
-    }
+        return $data != null 
+           && strtotime($data)>=strtotime($min)
+           && strtotime($data)<=strtotime($max);
+   }
 
    public static function username($data) {
     return filter_var($data);
