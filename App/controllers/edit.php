@@ -3,9 +3,10 @@ require "../App/core/Validator.php";
 require "../App/core/Database.php";
 auth();
 $config = require("../App/config.php");
+$db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = new Database($config);
+    
     $errors = [];
 
     if(!Validator::string($_POST["name"])){
@@ -18,12 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["due"] = "Due date incorrect";
     }
     if(empty($errors)){
-        $query = "UPDATE todos SET name = :name, description = :description, due = :due, user_id = :user_id WHERE id = :id;";
+        $query = "UPDATE todos SET name = :name, description = :description, due = :due WHERE id = :id;";
         $params = [
             ":name" => $_POST["name"],
             ":description" => $_POST["description"],
-            ":due" => $_POST["due"],
-            ":user_id" => $_SESSION["user_id"]
+            ":due" => $_POST["due"]
         ];
         $db->execute($query, $params);
     
@@ -31,6 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die();
     }
 }
+
+$query = "SELECT * FROM todos WHERE id = :id";
+  $params = [":id" => $_GET["id"]];
+  $todos = $db->execute($query, $params)->fetch();
+
 
 $title = "Edit";
 require "../App/views/edit.view.php";
