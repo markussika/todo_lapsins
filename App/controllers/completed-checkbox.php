@@ -1,39 +1,10 @@
 <?php
-require "../App/core/Validator.php";
-require "../App/core/Database.php";
+require "../App/models/Todo.php";
 auth();
-$config = require("../App/config.php");
-
+$model = new Todo();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if(isset($_POST['completed-checkbox']))
-    {
-        $db = new Database($config);
-        $errors = [];   
-    
-    
-        $query = "UPDATE todos SET completed = :completed WHERE id = :id;";
-        $params = [
-            ":id" => $_POST["todo-id"],
-            ":completed" => 1
-        ];
-        $db->execute($query, $params);
-    }else
-    {
-        $db = new Database($config);
-        $errors = [];
-    
-    
-        $query = "UPDATE todos SET completed = :completed WHERE id = :id;";
-        $params = [
-            ":id" => $_POST["todo-id"],
-            ":completed" => 0
-        ];
-        $db->execute($query, $params);
-    }
-
-
-
+    $model->checkbox();
 
 }
 
