@@ -18,7 +18,7 @@
       <th>Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="index-tr-wrapper">
       <?php foreach ($todos as $todo) { ?>
         <tr>
             <td class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>">

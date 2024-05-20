@@ -189,6 +189,9 @@ input[type="password"] {
   color: #4caf50;
 }
 
+.index-tr-wrapper:last-child {
+}
+
 @media (max-width: 576px) {
   .loginform {
     width: 90%;
@@ -236,7 +239,7 @@ body {
   background-color: rgb(209, 209, 209);
   padding-top: 15px;
   border-radius: 15px;
-  border: 2px solid black;
+  border: 2px solid rgb(196, 196, 196);
 }
 .index-tr > th {
   padding-bottom: 15px;
