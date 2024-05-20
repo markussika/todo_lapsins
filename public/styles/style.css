@@ -267,3 +267,7 @@ body {
   height: 100%;
   color: #780a0a;
 }
+.search{
+  display: flex;
+  justify-content: center;
+}
