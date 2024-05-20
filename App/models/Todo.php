@@ -56,7 +56,7 @@ require "../App/core/Database.php";
             $this->db->execute($query, $params);
         }
         public function todojoin(){
-            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id"; 
+            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name IS NOT NULL ;" ;
             $params = [];
             return $this->db->execute($query, $params)->fetchAll();
         }

@@ -1,23 +1,19 @@
 <?php
 guest();
 require "../App/core/Validator.php";
-require "../App/core/Database.php";
-$config = require("../App/config.php");
+require "../App/models/User.php";
+
+$model = new User();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $db = new Database($config);
 
   $errors = [];
 
   if (!Validator::username($_POST["username"])) {
     $errors["username"] = "Nepareiz lietotajvarda formāts";
   }
+  $user = $model->user();
 
-  $query = "SELECT * FROM users WHERE username = :username";
-  $params = [
-    ":username" => $_POST["username"]
-  ];
-  $user = $db->execute($query, $params)->fetch();
   if (!$user || !password_verify($_POST["password"], $user["password"])) {
     $errors["username"] = "Kaut kas nav labi";
   }
