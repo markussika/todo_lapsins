@@ -6,30 +6,28 @@
      } ?>
 
 <div class="form-wrapper">
-    <div>
     <div class="loginform">
     <h2 class="edit">Edit <?=($_POST["name"] ?? $todos["name"])?></h2>
     <form method="POST">
         Name:
         <input type="hidden" name="id" value="<?= $todos["id"] ?>" />
-            <input type="text" name='name' value="<?=($_POST["name"] ?? $todos["name"])?>" placeholder="name"/>
+            <input type="text" name='name' value="<?=($_POST["name"] ?? $todos["name"])?>"/>
             <?php if(isset($errors["name"])) { ?> 
-                <p class="invalid-data"><?= $errors["name"] ?></p>
+                <div><p class="error"><?= $errors["name"]?></p></div>
             <?php } ?>
             Description:
-            <input type="text" class="edit-input" name='description' value="<?=($_POST["description"] ?? $todos["description"])?>" placeholder="description"/>
+            <input type="text" name='description' value="<?=($_POST["description"] ?? $todos["description"])?>"/>
             <?php if(isset($errors["description"])) { ?> 
-                <p class="invalid-data"><?= $errors["description"] ?></p>
+                <div><p class="error"><?= $errors["description"]?></p></div>
             <?php } ?>
         <label>Due date:
             <input type="date" name='due' value="<?=($_POST["due"] ?? $todos["due"])?>"/>
             <?php if(isset($errors["due"])) { ?>
-                ><?= $errors["due"] ?>
+                <div><p class="error"><?= $errors["due"]?></p></div>
             <?php } ?>
         </label>
         <input type="submit" name="Update" value="Update">
         </form>
     </div>
-</div>
 </div>
 <?php require "../App/views/components/footer.php" ?>

@@ -125,7 +125,7 @@ tr:hover .p-wrapper {
   color: #4caf50;
   margin-top: 50px;
   display: flex;
-  align-items: center;
+
   justify-content: center;
 
   box-sizing: border-box;
@@ -257,7 +257,6 @@ body {
 /* papapa */
 .error {
   text-align: center;
-  font-size: 100px;
-  height: 100vh;
-  background-color: #780a0a;
+  height: 100%;
+  color: #780a0a;
 }

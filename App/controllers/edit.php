@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $errors = [];
 
-    if(!Validator::string($_POST["name"])){
+    if(!Validator::string($_POST["name"],min: 1, max: 255)){
         $errors["name"] = "Name incorrect";
     }
-    if(!Validator::string($_POST["description"])){
+    if(!Validator::string($_POST["description"],min: 1)){
         $errors["description"] = "Description incorrect";
     }
     if(!Validator::date($_POST["due"],date("Y-m-d"))){
