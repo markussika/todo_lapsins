@@ -57,7 +57,7 @@
                 
             </td>
             <td>
-                <div class="actions-index td-wrapper">
+                <div class="actions-index td-wrapper index-end-div">
                     <!-- <form action="/completed-checkbox" method="POST">
                         <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id">
                         <label>
