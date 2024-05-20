@@ -9,5 +9,6 @@ return [
   "/logout" => "../App/controllers/logout.php",
   "/show" => "../App/controllers/show.php",
   "/edit" => "../App/controllers/edit.php",
-  "/completed-checkbox" => "../App/controllers/completed-checkbox.php"
+  "/completed-checkbox" => "../App/controllers/completed-checkbox.php",
+  "/tasks" => "../App/controllers/tasks.php"
 ];

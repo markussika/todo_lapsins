@@ -189,7 +189,9 @@ input[type="password"] {
   color: #4caf50;
 }
 
-.index-tr-wrapper:last-child {
+.index-tr-wrapper:last-child > div {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 @media (max-width: 576px) {
