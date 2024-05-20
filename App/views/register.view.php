@@ -8,6 +8,7 @@
      } ?>
 
 
+<div class="form-wrapper">
 <div class="loginform">
         
         <form method="POST">
@@ -27,7 +28,7 @@
         <input type="submit" name="login-btn" value="Register">
     </form>      
     </div>
-    
+    </div>
 
 
 <?php require "../App/views/components/footer.php" ?>

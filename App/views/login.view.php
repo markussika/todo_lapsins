@@ -5,7 +5,7 @@
      require "../App/views/components/navbar.guest.php";
      } ?>
 
-
+<div class="form-wrapper">
 <div class="loginform">
         
         <form method="POST">
@@ -26,7 +26,7 @@
         <a href="/register">Don't have an account?</a>
     </form>      
     </div>
-    
+    </div>
 
 
 <?php require "../App/views/components/footer.php" ?>

@@ -5,6 +5,7 @@
      require "../App/views/components/navbar.guest.php";
      } ?>
 
+<div class="form-wrapper">
     <div>
     <div class="loginform">
     <h2 class="edit">Edit <?=($_POST["name"] ?? $todos["name"])?></h2>
@@ -30,5 +31,5 @@
         </form>
     </div>
 </div>
-
+</div>
 <?php require "../App/views/components/footer.php" ?>

@@ -5,7 +5,7 @@
      require "../App/views/components/navbar.guest.php";
      } ?>
 
-
+<div class="form-wrapper">
 <div class="loginform">
     <h2>Create</h2>
     <form method="POST">
@@ -29,5 +29,6 @@
         </label>
         <input type="submit" name="submit" value="Submit">
     </form>
+    </div>
     </div>
 <?php require "../App/views/components/footer.php" ?>

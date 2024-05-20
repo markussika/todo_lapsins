@@ -123,16 +123,22 @@ tr:hover .p-wrapper {
   background: #ffffff;
   width: 450px;
   color: #4caf50;
-
-  margin-top: 15%;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
   box-sizing: border-box;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 10px 29px 0px #e0e0e0;
+  flex-direction: column;
+}
+.form-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: max-content;
+  justify-content: center;
 }
 .loginform h2 {
   font-size: 30px;
@@ -251,11 +257,4 @@ body {
   font-size: 100px;
   height: 100vh;
   background-color: #780a0a;
-}
-
-@media{
-
-  .loginform
-
-
 }
