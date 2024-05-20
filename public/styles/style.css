@@ -106,10 +106,6 @@ tr:hover .p-wrapper {
   position: absolute;
   width: 20vw;
   height: 8vh;
-  /* right: -130%; */
-  /* top: 0; */
-  /* bottom: 0; */
-  /* top: -40px; */
   left: 0;
   opacity: 0;
   cursor: pointer;
@@ -223,13 +219,17 @@ header {
 body {
   padding-top: 50px;
 }
+
+.index-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: gray;
+}
+
 /* papapa */
-.error{
+.error {
   text-align: center;
   font-size: 100px;
   height: 100vh;
   background-color: #780a0a;
-  
-  
-  
 }

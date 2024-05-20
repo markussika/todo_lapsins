@@ -1,7 +1,7 @@
 <?php require "../App/views/components/head.php" ?>
 <?php require "../App/views/components/navbar.php" ?>
 
-
+<div class="index-wrapper">
 <?php if(!empty($todos)){ ?>
 <table>
   <thead>
@@ -65,4 +65,5 @@
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
+</div>
 <?php require "../App/views/components/footer.php" ?>
