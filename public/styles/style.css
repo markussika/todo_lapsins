@@ -256,6 +256,11 @@ body {
   justify-content: center;
 }
 
+.index-end-div {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
 /* papapa */
 .error {
   text-align: center;

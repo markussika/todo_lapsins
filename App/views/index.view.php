@@ -46,15 +46,8 @@
                 </div>
                 
             </td>
-            <td>
+            <td class="index-end-div">
                 <div class="actions-index td-wrapper index-end-div">
-                    <!-- <form action="/completed-checkbox" method="POST">
-                        <input type="hidden" value="<?= $todo["id"] ?>" name="todo-id">
-                        <label>
-                            Status:
-                            <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?> name="completed-checkbox" onchange="this.form.method='post'; this.form.submit()">
-                        </label>
-                    </form> -->
                     <form action="/edit">
                         <button name="id" value="<?= $todo['id'] ?>" class="edit-but">Edit</button>
                     </form>
