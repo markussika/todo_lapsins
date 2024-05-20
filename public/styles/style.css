@@ -123,10 +123,12 @@ tr:hover .p-wrapper {
   background: #ffffff;
   width: 450px;
   color: #4caf50;
-  left: 50%;
+
   margin-top: 15%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
   box-sizing: border-box;
   padding: 20px;
   border-radius: 5px;
@@ -249,4 +251,11 @@ body {
   font-size: 100px;
   height: 100vh;
   background-color: #780a0a;
+}
+
+@media{
+
+  .loginform
+
+
 }
