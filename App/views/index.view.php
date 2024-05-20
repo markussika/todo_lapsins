@@ -1,11 +1,12 @@
 <?php require "../App/views/components/head.php" ?>
 <?php require "../App/views/components/navbar.php" ?>
 
+<div class="wrapper">
 <div class="index-wrapper">
 <?php if(!empty($todos)){ ?>
 <table>
   <thead>
-    <tr>
+    <tr class="index-tr">
       <th>Name</th>
       <th>Created By</th>
       <th>Due by</th>
@@ -65,5 +66,6 @@
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
+</div>
 </div>
 <?php require "../App/views/components/footer.php" ?>
