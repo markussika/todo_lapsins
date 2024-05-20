@@ -7,6 +7,16 @@
 
 <div class="wrapper">
 <div class="index-wrapper">
+    <div>
+        <form method="POST">
+            <input name="search" placeholder="Search todos">
+            <button>Search</button>
+        </form>
+    </div>
+    <?php 
+    if(!empty($_POST["search"])) {
+        $todos = $model->search();
+    } ?>
 <?php if(!empty($todos)){ ?>
 <table>
   <thead>

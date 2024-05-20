@@ -60,4 +60,10 @@ require "../App/core/Database.php";
             $params = [];
             return $this->db->execute($query, $params)->fetchAll();
         }
+        public function search(){
+            $search = $_POST["search"];
+            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name LIKE :search; AND name IS NOT NULL ;";
+            $params = [":search" => "%{$search}%"];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
     }
