@@ -1,5 +1,12 @@
 <?php require "../App/views/components/head.php" ?>
-<?php require "../App/views/components/navbar.php" ?>
+
+<?php if ($_SESSION["user"] = true){?>
+     <?php require "../App/views/components/navbar.auth.php";?>
+    <?php} elseif ($_SESSION["user"] = false){?>
+    <?php require "../App/views/components/navbar.guest.php"; ?>
+    <?php } ?>
+
+<!-- <?php require "../App/views/components/navbar.php" ?> -->
 <div class="loginform">
     <h2>Create</h2>
     <form method="POST">

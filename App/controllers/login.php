@@ -30,7 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /");
     die();
   }
+
+  if ($_SESSION["user"] = true){
+    return "../App/views/components/navbar.auth.php";
+  }elseif ($_SESSION["user"] = false){
+    return "../App/views/components/navbar.guest.php";
+  }
+
 }
+
+
 
 $title = "Login";
 require "../App/views/login.view.php";
