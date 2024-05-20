@@ -7,7 +7,7 @@
 
 <div class="wrapper">
 <div class="index-wrapper">
-    <div>
+    <div class="search">
         <form method="POST">
             <input name="search" placeholder="Search todos">
             <button>Search</button>
