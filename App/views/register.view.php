@@ -1,7 +1,11 @@
 <?php require "../App/views/components/head.php" ?>
   
 
-<?php require "../App/views/components/navbar.php" ?>
+<?php if (isset($_SESSION["user"]) ){
+     require "../App/views/components/navbar.auth.php";
+    } else {
+     require "../App/views/components/navbar.guest.php";
+     } ?>
 
 
 <div class="loginform">
