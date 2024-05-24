@@ -7,18 +7,22 @@
 
 <div class="calendar">
   <div class="days">
+
+  <?php foreach ($todos as $todo) { ?>
     <div class="day mon">
       <div class="date">
-        <p class="date-num">9</p>
-        <p class="date-day">Mon</p>
+        <p class="date-num"><?= $todo["due"] ?></p>
       </div>
+      <?php foreach ($todosE as $todoE) { ?>
       <div class="events">
         <div class="event start-2 end-5 securities">
           <p class="title">Securities Regulation</p>
           <p class="time">2 PM - 5 PM</p>
         </div>
       </div>
+      <?php } ?>
     </div>
+    <?php } ?>
     <div class="day mon">
       <div class="date">
         <p class="date-num">9</p>
