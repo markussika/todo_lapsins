@@ -66,4 +66,11 @@ require "../App/core/Database.php";
             $params = [":search" => "%{$search}%"];
             return $this->db->execute($query, $params)->fetchAll();
         }
+
+        public function userTodos(){
+            $userId = $_SESSION["user_id"];
+            $query = "SELECT * FROM todos WHERE user_id = :user_id";
+            $params = [":user_id" => $userId ];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
     }
