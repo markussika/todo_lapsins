@@ -9,7 +9,7 @@
 <div class="index-wrapper">
     <div class="search">
         <form method="POST">
-            <input name="search" placeholder="Search todos" value="<?= ($_SESSION['search'] = $_POST['search']) ?? ''?>">
+        <input name="search" placeholder="Search todos" value="<?= isset($_POST['search']) ? ($_SESSION['search'] = $_POST['search']) : '' ?>">
             <button>Search</button>
         </form>
     </div>
