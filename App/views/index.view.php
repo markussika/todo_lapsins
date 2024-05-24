@@ -39,7 +39,9 @@
             </td>
             <td class="td-div">
                 <div class="td-wrapper">
-                    <?= $todo["due"] ?>
+                    <p><?= $todo["due"] ?></p>
+                    <div class="warning" >
+                    </div>
                     <div class="p-wrapper">
                         <p class="p-description"><p class="description-title">Description</p><?= $todo["description"] ?></p>
                     </div>
