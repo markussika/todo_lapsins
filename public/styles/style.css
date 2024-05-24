@@ -29,6 +29,7 @@ table {
   flex-direction: column;
   justify-content: space-around;
   height: 8vh;
+  text-decoration: none;
 }
 
 .actions-index > form > button {
@@ -38,6 +39,7 @@ table {
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
+  text-decoration: none;
 }
 
 .delete-but {
