@@ -269,7 +269,7 @@ input[type="password"] {
   font-size: 16px;
 }
 .loginform input[type="submit"] {
-  background: #4caf50;
+  background: rgb(55, 55, 55);
   color: #fff;
   font-size: 20px;
   padding: 10px;
@@ -280,19 +280,19 @@ input[type="password"] {
 }
 .loginform input[type="submit"]:hover {
   cursor: pointer;
-  background: #1f5822;
+  background: rgb(55, 55, 55);
 }
 .loginform a {
   text-decoration: none;
   font-size: 15px;
   line-height: 20px;
-  color: #1e5220;
+  color: rgb(55, 55, 55);
 }
 .loginform .have-not {
   float: right;
 }
 .loginform a:hover {
-  color: #4caf50;
+  color: rgb(55, 55, 55);
 }
 
 .index-tr-wrapper:last-child > div {
