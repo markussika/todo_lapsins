@@ -132,6 +132,7 @@ table {
   flex-direction: column;
   justify-content: space-around;
   height: 8vh;
+  text-decoration: none;
 }
 
 .actions-index > form > button {
@@ -141,6 +142,7 @@ table {
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
+  text-decoration: none;
 }
 
 .delete-but {
@@ -165,7 +167,7 @@ table {
   height: 100%;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+z-index: 1;
 }
 .p-description {
   line-break: auto;
@@ -227,16 +229,16 @@ tr:hover .p-wrapper {
   background: #ffffff;
   width: 450px;
   color: #4caf50;
-  margin-top: 50px;
+margin-top: 50px;
   display: flex;
-
+  
   justify-content: center;
-
+ 
   box-sizing: border-box;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 10px 29px 0px #e0e0e0;
-  flex-direction: column;
+flex-direction: column;
 }
 .form-wrapper {
   display: flex;
@@ -316,7 +318,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 6;
+z-index: 6;
 }
 .navbarcol {
   transition: transform 250ms;
@@ -332,9 +334,9 @@ header {
   left: 0;
   width: 100vw;
   height: 50px;
-  background: rgb(120, 66, 8);
+  background: rgb(55, 55, 55);
   border-bottom: 1px solid #000000;
-  z-index: 6;
+z-index: 6;
 }
 body {
   padding-top: 50px;
