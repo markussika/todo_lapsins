@@ -16,7 +16,7 @@
 
 <?php if (!empty($groupedTodos)) { ?>
     <?php foreach ($groupedTodos as $dueDate => $todos) { ?>
-      <h2><?= date('F j, Y', strtotime($dueDate)) ?></h2>
+      <h2 class="tasks-date"><?= date('F j, Y', strtotime($dueDate)) ?></h2>
         <table>
             <thead>
                 <tr class="index-tr">
@@ -59,5 +59,6 @@
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
+
 
 <?php require "../App/views/components/footer.php" ?>

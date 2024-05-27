@@ -163,6 +163,10 @@ table {
   height: 8vh;
   text-decoration: none;
 }
+.tasks-date {
+  font-size: 25px;
+  padding-left: 10px;
+}
 
 .actions-index > form > button {
   background: none;
