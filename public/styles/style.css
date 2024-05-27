@@ -106,6 +106,7 @@ body {
   font-weight: 600;
   display: inline;
   color: white;
+  padding: 5px;
 }
 
 .date-day {

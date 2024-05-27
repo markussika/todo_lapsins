@@ -32,7 +32,6 @@
       <?php foreach ($todos as $todo) { ?>
         <tr> 
             <td class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>">
-            <td>
                 <div class="td-wrapper"><?= $todo["name"] ?></div>
             </td>
             <td>
