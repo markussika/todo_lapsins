@@ -5,25 +5,27 @@
      require "../App/views/components/navbar.guest.php";
 } ?>
 
-<div class="calendar">
-  <div class="days">
 
-  <?php foreach ($todos as $todo) { ?>
-    <div class="day mon">
-      <div class="date">
-        <p class="date-num"><?= $todo["due"] ?></p>
-      </div>
-      <?php foreach ($todosE as $todoE) { ?>
-      <div class="events">
-        <div class="event start-2 end-5 securities">
-          <p class="title">Securities Regulation</p>
-          <p class="time">2 PM - 5 PM</p>
+<div class="calendar">
+    <div class="days">
+    <?php foreach ($groupedTodos as $dueDate => $todosOnDate) { ?>
+        <div class="day mon">
+            <div class="date">
+                <p class="date-num"><?= $dueDate ?></p>
+            </div>
+            <div class="events">
+            <?php foreach ($todosOnDate as $todoE) { ?>
+                <div class="event start-2 end-5 securities">
+                    <p class="title"><?= $todoE["name"] ?></p>
+                    <p class="time"><?= $todoE["description"] ?></p>
+                </div>
+            <?php } ?>
+            </div>
         </div>
-      </div>
-      <?php } ?>
-    </div>
     <?php } ?>
-    <div class="day mon">
+    </div>
+</div>
+    <!-- <div class="day mon">
       <div class="date">
         <p class="date-num">9</p>
         <p class="date-day">Mon</p>
@@ -114,9 +116,9 @@
       </div>
       <div class="events">
       </div>
-    </div>
-  </div>
-</div>
+    </div> -->
+  <!-- </div>
+</div> -->
 
 
 <?php require "../App/views/components/footer.php" ?>
