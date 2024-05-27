@@ -51,7 +51,7 @@ require "../App/core/Database.php";
                 SELECT users.*, todos.* 
                 FROM users 
                 LEFT JOIN todos ON users.id = todos.user_id 
-                WHERE users.username IS NOT NULL 
+                WHERE name IS NOT NULL 
                 ORDER BY todos.due
             ";
             $params = [];
