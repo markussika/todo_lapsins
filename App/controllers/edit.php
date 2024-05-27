@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $errors = [];
 
-    if(!Validator::string($_POST["search"],min: 1, max: 255)){
+    if(!Validator::string($_POST["name"],min: 1, max: 255)){
         $errors["name"] = "Name incorrect";
     }
     if(!Validator::string($_POST["description"],min: 1)){
