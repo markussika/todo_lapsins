@@ -30,8 +30,9 @@
   </thead>
   <tbody>
       <?php foreach ($todos as $todo) { ?>
-        <tr>
+        <tr> 
             <td class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>">
+            <td>
                 <div class="td-wrapper"><?= $todo["name"] ?></div>
             </td>
             <td>
@@ -39,8 +40,8 @@
             </td>
             <td class="td-div">
                 <div class="td-wrapper">
-                    <p><?= $todo["due"] ?></p>
-                    <div class="warning" >
+                    <p style=<?= dueCheck($todo["due"], $todo["completed"])?>><?= $todo["due"] ?></p>
+                    <div class="warning " >
                     </div>
                     <div class="p-wrapper">
                         <p class="p-description"><p class="description-title">Description</p><?= $todo["description"] ?></p>

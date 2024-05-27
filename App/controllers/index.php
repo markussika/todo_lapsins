@@ -10,8 +10,8 @@ if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
 function dueCheck($due, $comp){
     $dueDays = (strtotime($due)-strtotime(date("Y-m-d"))) / (60 * 60 * 24);
     $comp == 1 ? $warning = "" :
-    ($dueDays < 0 ? $warning = 1 : 
-    ($dueDays <= 1 && $dueDays >= 0 ? $warning = 2 : $warning = "")) ;
+    ($dueDays < 0 ? $warning = $warning = "color:red;" : 
+    ($dueDays <= 1 && $dueDays >= 0 ? $warning = "color:yellow;" : $warning = "")) ;
     return $warning;
 }
  
