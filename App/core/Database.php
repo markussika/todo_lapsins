@@ -19,4 +19,7 @@ class Database {
 
     return $query;
   }
+  public function prepare($query_string) {
+    return $this->pdo->prepare($query_string);
+  }
 }

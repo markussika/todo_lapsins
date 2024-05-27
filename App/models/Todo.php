@@ -46,16 +46,20 @@ require "../App/core/Database.php";
             $params = [];
             return $this->db->execute($query, $params)->fetchAll();
         }
-        public function getJoinedAndGroupedTodos() {
-            $query = "
+        public function getJoinedAndGroupedTodos($start, $limit) {
+                $query = "
                 SELECT users.*, todos.* 
                 FROM users 
-                LEFT JOIN todos ON users.id = todos.user_id 
-                WHERE todos.name IS NOT NULL 
-                ORDER BY todos.due
-            ";
-            $params = [];
-            $todos = $this->db->execute($query, $params)->fetchAll();
+                LEFT JOIN todos 
+                ON users.id = todos.user_id 
+                WHERE name IS NOT NULL 
+                ORDER BY todos.due 
+                LIMIT :start, :limit;";
+                $stmt = $this->db->prepare($query);
+                $stmt->bindValue(':start', (int) trim($start), PDO::PARAM_INT);
+                $stmt->bindValue(':limit', (int) trim($limit), PDO::PARAM_INT);
+                $stmt->execute();
+                return $stmt->fetchAll();
         
             $groupedTodos = [];
             foreach ($todos as $todo) {

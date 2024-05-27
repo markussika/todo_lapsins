@@ -2,7 +2,11 @@
 require "../App/core/Validator.php";
 require "../App/models/Todo.php";
 $model = new Todo();
-$todos = $model->todojoinAndSorted();
+
+$page = 1;
+$limit = 10*$page;
+$start = $limit - 10;
+$todos = $model->getJoinedAndGroupedTodos($start, $limit);
 
 
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
@@ -17,9 +21,6 @@ function dueCheck($due, $comp){
     return $warning;
 }
 
-
- 
-
-
 $title = "Home page";
 require "../App/views/index.view.php";
+?>

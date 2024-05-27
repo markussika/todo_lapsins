@@ -72,6 +72,10 @@
       <?php } ?>
   </tfoot>
 </table>
+<div class="pagination">
+    <a href="?page=<?= $page - 1 ?>">Previous</a>
+    <a href="?page=<?= $page + 1 ?>">Next</a>
+</div>
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
