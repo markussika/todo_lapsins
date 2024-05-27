@@ -46,6 +46,28 @@ require "../App/core/Database.php";
             $params = [];
             return $this->db->execute($query, $params)->fetchAll();
         }
+        public function getJoinedAndGroupedTodos() {
+            $query = "
+                SELECT users.*, todos.* 
+                FROM users 
+                LEFT JOIN todos ON users.id = todos.user_id 
+                WHERE todos.name IS NOT NULL 
+                ORDER BY todos.due
+            ";
+            $params = [];
+            $todos = $this->db->execute($query, $params)->fetchAll();
+        
+            $groupedTodos = [];
+            foreach ($todos as $todo) {
+                $dueDate = $todo["due"];
+                if (!isset($groupedTodos[$dueDate])) {
+                    $groupedTodos[$dueDate] = [];
+                }
+                $groupedTodos[$dueDate][] = $todo;
+            }
+        
+            return $groupedTodos;
+        }
         public function todojoinAndSorted(){
             $query = "
                 SELECT users.*, todos.* 

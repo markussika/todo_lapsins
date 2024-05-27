@@ -33,10 +33,16 @@ body {
   grid-template-rows: repeat(var(--numHours), var(--timeHeight));
 }
 
-.days {
+/* .days {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+} */
+
+.days {
+  display: flex;
+  margin: 5px;
+  min-width: 150px;
 }
 
 .events {
@@ -48,6 +54,7 @@ body {
   margin-bottom: 30px;
   height: 100%;
   margin-top: 30px;
+  align-items: center;
 }
 
 .title {
@@ -139,10 +146,14 @@ td {
   width: 17vw;
   height: 8vh;
 }
+.tr-user > td {
+  width: 33.3333333333vw;
+}
 
 table {
   border-collapse: separate;
   border-spacing: 0 5px;
+  margin-bottom: 30px;
 }
 
 .actions-index {
@@ -362,6 +373,7 @@ body {
 }
 
 .index-wrapper {
+  min-width: 85vw;
   width: max-content;
   min-height: 100vh;
   background-color: rgb(209, 209, 209);
