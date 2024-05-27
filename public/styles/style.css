@@ -2,12 +2,12 @@
   --numDays: 5;
   --numHours: 10;
   --timeHeight: 60px;
-  --calBgColor: #f1ffff;
+  --calBgColor: #323232;
   --eventBorderColor: #f2d3d8;
-  --eventColor1: #ffd6d1;
-  --eventColor2: #fafaa3;
-  --eventColor3: #e2f8ff;
-  --eventColor4: #d1ffe6;
+  --eventColor1: white;
+  --eventColor2: white;
+  --eventColor3: white;
+  --eventColor4: white;
 }
 
 html,
@@ -105,6 +105,7 @@ body {
   font-size: 3rem;
   font-weight: 600;
   display: inline;
+  color: white;
 }
 
 .date-day {
