@@ -46,6 +46,17 @@ require "../App/core/Database.php";
             $params = [];
             return $this->db->execute($query, $params)->fetchAll();
         }
+        public function todojoinAndSorted(){
+            $query = "
+                SELECT users.*, todos.* 
+                FROM users 
+                LEFT JOIN todos ON users.id = todos.user_id 
+                WHERE users.username IS NOT NULL 
+                ORDER BY todos.due
+            ";
+            $params = [];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
         public function checkbox(){
             isset($_POST['completed-checkbox']) ? $checked = 1 : $checked = 0;
             $query = "UPDATE todos SET completed = :completed WHERE id = :id;";
@@ -55,11 +66,7 @@ require "../App/core/Database.php";
             ];
             $this->db->execute($query, $params);
         }
-        public function todojoin(){
-            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name IS NOT NULL ;" ;
-            $params = [];
-            return $this->db->execute($query, $params)->fetchAll();
-        }
+        
         public function search(){
             $search = $_POST["search"];
             $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name LIKE :search; AND name IS NOT NULL ;";

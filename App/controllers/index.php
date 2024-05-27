@@ -2,7 +2,9 @@
 require "../App/core/Validator.php";
 require "../App/models/Todo.php";
 $model = new Todo();
-$todos = $model->todojoin();
+$todos = $model->todojoinAndSorted();
+
+
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
     $todos = $model->search();
 }
@@ -14,6 +16,8 @@ function dueCheck($due, $comp){
     ($dueDays <= 1 && $dueDays >= 0 ? $warning = "color:yellow;" : $warning = "")) ;
     return $warning;
 }
+
+
  
 
 
