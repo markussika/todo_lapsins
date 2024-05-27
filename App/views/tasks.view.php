@@ -8,12 +8,16 @@
 
 <div class="calendar">
     <div class="days">
-    <?php foreach ($groupedTodos as $dueDate => $todosOnDate) { ?>
+    <?php foreach ($groupedTodos as $dueDate => $todosOnDate) { 
+        // Format the due date
+        $dateObj = new DateTime($dueDate);
+        $formattedDate = $dateObj->format('F j, Y');
+    ?>
         <div class="day mon">
-            <div class="date">
-                <p class="date-num"><?= $dueDate ?></p>
-            </div>
             <div class="events">
+            <div class="date">
+                <p class="date-num"><?= $formattedDate ?></p>
+            </div>
             <?php foreach ($todosOnDate as $todoE) { ?>
                 <div class="event start-2 end-5 securities">
                     <p class="title"><?= $todoE["name"] ?></p>

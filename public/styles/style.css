@@ -41,12 +41,13 @@ body {
 
 .events {
   display: flex;
-  padding-top: 60px;
+  padding-top: 10px;
   border-radius: 5px;
   flex-direction: column;
   background: var(--calBgColor);
   margin-bottom: 30px;
   height: 100%;
+  margin-top: 30px;
 }
 
 .title {
@@ -56,7 +57,7 @@ body {
 
 .event {
   display: flex;
-  flex-direction: column; /* Ensure content stacks vertically */
+  flex-direction: column;
   width: inherit;
   border: 1px solid var(--eventBorderColor);
   border-radius: 5px;
@@ -64,8 +65,8 @@ body {
   margin: 0 0.5rem;
   box-sizing: border-box;
   word-wrap: break-word;
-  word-break: break-word; /* Break long words */
-  overflow-wrap: break-word; /* Break long words */
+  word-break: break-word;
+  overflow-wrap: break-word;
   background: white;
   height: max-content;
   margin-top: 10px;
@@ -104,9 +105,23 @@ body {
 .date-num {
   font-size: 3rem;
   font-weight: 600;
-  display: inline;
+  display: inline-block;
   color: white;
   padding: 5px;
+  white-space: nowrap; /* Prevents the text from breaking into a new line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if the text overflows */
+  max-width: 100%; /* Ensures the text fits within the container */
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  margin: 0;
+}
+
+.date {
+  display: flex; /* Flex container for proper alignment */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  width: 100%; /* Full width container */
+  overflow: hidden; /* Ensures that overflow content is hidden */
 }
 
 .date-day {
