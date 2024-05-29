@@ -14,6 +14,7 @@
 
 ?>
 
+
 <?php if (!empty($groupedTodos)) { ?>
     <?php foreach ($groupedTodos as $dueDate => $todos) { ?>
       <h2 class="tasks-date"><?= date('F j, Y', strtotime($dueDate)) ?></h2>
