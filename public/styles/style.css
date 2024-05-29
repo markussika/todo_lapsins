@@ -33,12 +33,6 @@ body {
   grid-template-rows: repeat(var(--numHours), var(--timeHeight));
 }
 
-/* .days {
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-} */
-
 .days {
   display: flex;
   margin: 5px;
@@ -116,20 +110,20 @@ body {
   display: inline-block;
   color: white;
   padding: 5px;
-  white-space: nowrap; /* Prevents the text from breaking into a new line */
-  overflow: hidden; /* Hides the overflow text */
-  text-overflow: ellipsis; /* Adds ellipsis (...) if the text overflows */
-  max-width: 100%; /* Ensures the text fits within the container */
-  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 0;
 }
 
 .date {
-  display: flex; /* Flex container for proper alignment */
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Centers the content vertically */
-  width: 100%; /* Full width container */
-  overflow: hidden; /* Ensures that overflow content is hidden */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .date-day {
@@ -139,8 +133,6 @@ body {
 }
 
 td {
-  /* display: flex; */
-  /* background-color: rgb(174, 174, 174); */
   background-color: rgb(225, 225, 225);
   text-align: center;
   width: 17vw;
@@ -433,6 +425,7 @@ nav {
 }
 
 /* papapa */
+
 .error {
   text-align: center;
   height: 100%;
