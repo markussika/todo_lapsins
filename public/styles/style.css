@@ -146,6 +146,7 @@ table {
   border-collapse: separate;
   border-spacing: 0 5px;
   margin-bottom: 90px;
+  width: 100%;
 }
 
 .actions-index {
