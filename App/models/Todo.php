@@ -120,6 +120,11 @@ require "../App/core/Database.php";
             }
             return $groupedTodos;
         }
+        public function users(){
+            $query = "SELECT * FROM users";
+            $params = [];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
         public function assign($userid, $todoid){
             $query = "INSERT INTO assigned (user_id, todo_id) 
             VALUES (:user_id, :todo_id);";
