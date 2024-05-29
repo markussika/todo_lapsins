@@ -359,7 +359,7 @@ nav {
   text-decoration: none;
 }
 .navbarcol:hover {
-  transform: translateX(10px);
+  transform: translateX(5px);
 }
 header {
   position: fixed;
@@ -418,6 +418,18 @@ body {
 .pagination-wrapper {
   display: flex;
   justify-content: center;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.current {
+  padding: 10px 0px;
+  text-align: center;
+  border-bottom: 3px solid rgb(100, 100, 255);
 }
 
 /* papapa */
