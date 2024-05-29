@@ -9,8 +9,6 @@ require "../App/models/Todo.php";
 $model = new Todo();
 $todos = $model->userTodos();
 
-
-
 $groupedTodos = $model->todojoinAndSorted();
 
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
