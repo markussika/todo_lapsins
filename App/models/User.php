@@ -23,7 +23,7 @@ class User{
     public function createUser(){
         $query = "INSERT INTO users (username, password) VALUES (:username, :password)";
         $params = [
-          ":username" => $_POST["username"],
+          ":username" => htmlspecialchars($_POST["username"]),
           ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)
         ];
         $this->db->execute($query, $params);

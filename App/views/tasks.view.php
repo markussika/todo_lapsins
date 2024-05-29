@@ -31,7 +31,7 @@
                 <?php foreach ($todos as $todo) { ?>
                     <tr class="tr-user"> 
                         <td class="<?= $todo["completed"] == 1 ? "com" : "not-com" ?>">
-                            <div class="td-wrapper"><?= $todo["name"] ?></div>
+                            <div class="td-wrapper"><?= htmlspecialchars($todo["name"]) ?></div>
                         </td>
                         <td>
                             <div class="td-wrapper">
