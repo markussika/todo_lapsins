@@ -449,15 +449,14 @@ nav {
 }
 @media screen and (max-width: 566px) {
   header {
-    width: 90%;
+    width: 100%;
   }
   .wrapper {
-    min-width: 85vw;
-  width: max-content;
-  min-height: 100vh;
-  background-color: rgb(209, 209, 209);
-  padding-top: 15px;
-  border-radius: 15px;
-  border: 2px solid rgb(196, 196, 196);
+    /* min-width: 100vw;
+    min-height: 100vh; */
+    background-color: rgb(209, 209, 209);
+    padding-top: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(196, 196, 196);
   }
 }
