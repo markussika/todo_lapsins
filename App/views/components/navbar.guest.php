@@ -6,3 +6,16 @@
         <a class="navbarcol" href="/login">Login</a>
     </nav>
 </header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var currentUrl = window.location.pathname;
+        var navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(function(link) {
+            if (link.getAttribute("href") === currentUrl) {
+                link.classList.add("current");
+            }
+        });
+    });
+</script>
