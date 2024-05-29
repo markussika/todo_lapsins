@@ -20,7 +20,7 @@ function dueCheck($due, $comp){
     $dueDays = (strtotime($due)-strtotime(date("Y-m-d"))) / (60 * 60 * 24);
     $comp == 1 ? $warning = "" :
     ($dueDays < 0 ? $warning = $warning = "color:red;" : 
-    ($dueDays <= 1 && $dueDays >= 0 ? $warning = "color:yellow;" : $warning = "")) ;
+    ($dueDays <= 1 && $dueDays >= 0 ? $warning = "color:orange;" : $warning = "")) ;
     return $warning;
 }
 
