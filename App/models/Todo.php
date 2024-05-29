@@ -106,4 +106,18 @@ require "../App/core/Database.php";
             $params = [":user_id" => $userId ];
             return $this->db->execute($query, $params)->fetchAll();
         }
+
+        public function getGroupedTodos($todos) {
+            $groupedTodos = [];
+            if (!empty($todos)) {
+                foreach ($todos as $todo) {
+                    $dueDate = $todo["due"];
+                    if (!isset($groupedTodos[$dueDate])) {
+                        $groupedTodos[$dueDate] = [];
+                    }
+                    $groupedTodos[$dueDate][] = $todo;
+                }
+            }
+            return $groupedTodos;
+        }
     }
