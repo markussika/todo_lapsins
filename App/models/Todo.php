@@ -120,4 +120,12 @@ require "../App/core/Database.php";
             }
             return $groupedTodos;
         }
+        public function assign($userid, $todoid){
+            $query = "INSERT INTO assigned (user_id, todo_id) 
+            VALUES (:user_id, :todo_id);";
+            $params = [
+                ":user_id" => $userid,
+                ":todo_id" => $todoid
+            ];
+        }
     }

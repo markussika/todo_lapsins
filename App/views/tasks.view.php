@@ -23,6 +23,7 @@
                 <tr class="index-tr">
                     <th>Name</th>
                     <th>Completed</th>
+                    <th>Assing user</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -44,6 +45,12 @@
                                     </div>
                                 </form>
                             </div>
+                        </td>
+                        <td>
+                            <form method="POST">
+                                <input name="username">
+                                <button>Assign</button>
+                            </form>
                         </td>
                         <td class="index-end-div">
                             <div class="actions-index td-wrapper index-end-div">
