@@ -403,6 +403,23 @@ body {
   border-bottom-right-radius: 4px;
 }
 
+.pagination {
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: rgb(244, 246, 255);
+  color: rgb(0, 0, 0);
+  margin: 0px 1px;
+}
+
+.pagination:hover {
+  background-color: rgb(233, 237, 255);
+}
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* papapa */
 .error {
   text-align: center;
