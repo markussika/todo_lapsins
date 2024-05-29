@@ -38,6 +38,9 @@
                                     <p><?= $todo["completed"] == 1 ? "completed" : "Not completed" ?></p>
                                     <p class="click-top-change-text">Click to change</p>               
                                     <input type="checkbox" <?= $todo["completed"] == 1 ? 'checked' : '' ?> name="completed-checkbox" onchange="this.form.method='post'; this.form.submit()">
+                                    <div class="p-wrapper">
+                                        <p class="p-description"><p class="description-title">Description</p><?= $todo["description"] ?></p>
+                                    </div>
                                 </form>
                             </div>
                         </td>
