@@ -72,13 +72,12 @@
       <?php } ?>
   </tfoot>
 </table>
-<?php if($maxpage > 1){ ?>
+
 <div class="pagination-wrapper">
     <a href="?page=<?= $page - 1 ?>" class="pagination">Previous</a>
     <p class="pagination"><?= $page?></p>
     <a href="?page=<?= $page + 1 ?>" class="pagination">Next</a>
 </div>
-<?php } ?>
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
