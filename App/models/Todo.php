@@ -12,10 +12,10 @@ require "../App/core/Database.php";
             $query = "INSERT INTO todos (name, description, due, user_id) 
             VALUES (:name, :description, :due, :user_id);";
             $params = [
-                ":name" => $_POST["name"],
-                ":description" => $_POST["description"],
-                ":due" => $_POST["due"],
-                ":user_id" => $_SESSION["user_id"]
+                ":name" => htmlspecialchars($_POST["name"]),
+                ":description" => htmlspecialchars($_POST["description"]),
+                ":due" => htmlspecialchars($_POST["due"]),
+                ":user_id" => htmlspecialchars($_SESSION["user_id"])
             ];
             $this->db->execute($query, $params);
         }
@@ -28,11 +28,11 @@ require "../App/core/Database.php";
         public function update(){
             $query = "UPDATE todos SET name = :name, description = :description, due = :due, completed = :completed WHERE id = :id;";
             $params = [
-                ":name" => $_POST["name"],
-                ":description" => $_POST["description"],
-                ":due" => $_POST["due"],
+                ":name" => htmlspecialchars($_POST["name"]),
+                ":description" => htmlspecialchars($_POST["description"]),
+                ":due" => htmlspecialchars($_POST["due"]),
                 ":completed" => 0,
-                ":id" => $_POST["id"]
+                ":id" => htmlspecialchars($_POST["id"])
             ];
             $this->db->execute($query, $params);
         }
