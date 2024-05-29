@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!Validator::username($_POST["username"])) {
     $errors["username"] = "Nepareiz lietotājvārda formāts";
   }
-  // if (!Validator::password($_POST["password"])) {
-  //   $errors["password"] = "Parolē ir nepilnības";
-  // }
-  // PĀRBAUDĪS, VAI datubāzē ir e-pasts
-  // 
+  if (!Validator::password($_POST["password"])) {
+    $errors["password"] = "Parolē ir nepilnības";
+  }
+  //PĀRBAUDĪS, VAI datubāzē ir e-pasts
+  
   $result = $model->user();
 
   if ($result) {
