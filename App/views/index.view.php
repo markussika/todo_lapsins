@@ -74,7 +74,7 @@
 </table>
 <div class="pagination-wrapper">
     <a href="?page=<?= $page - 1 ?>" class="pagination">Previous</a>
-    <div><?= $page?></div>
+    <p class="pagination"><?= $page?></p>
     <a href="?page=<?= $page + 1 ?>" class="pagination">Next</a>
 </div>
 <?php } else { ?>
