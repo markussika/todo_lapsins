@@ -9,8 +9,8 @@
 <div class="index-wrapper">
     <div class="search">
         <form method="POST">
-        <input name="search" placeholder="Search todos" value="<?= isset($_POST['search']) ? ($_SESSION['search'] = $_POST['search']) : '' ?>">
-            <button>Search</button>
+        <input name="search" placeholder="Search todos" value="<?= isset($_POST['search']) ? ($_SESSION['search'] = $_POST['search']) : '' ?>" class="search-bar">
+            <button class="search-but">Search</button>
         </form>
     </div>
     <?php 

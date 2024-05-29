@@ -424,6 +424,18 @@ nav {
   border-bottom: 3px solid rgb(100, 100, 255);
 }
 
+.search-bar {
+  border-radius: 4px;
+  border: 0px;
+  padding: 5px;
+}
+
+.search-but {
+  border-radius: 4px;
+  border: 0px;
+  padding: 5px;
+}
+
 /* papapa */
 
 .error {
