@@ -4,7 +4,7 @@ require "../App/models/Todo.php";
 $model = new Todo();
 
 $page = 1;
-$maxpage = intdiv(count($model->all()), 5) +1;
+$maxpage = intdiv(count($model->all()), 5)+1;
 if(isset($_GET['page']) && $_GET['page'] != 0  && $_GET['page'] > 0) {
         $_GET['page'] > $maxpage ? $page = $maxpage : $page += $_GET['page']-1;
 }
