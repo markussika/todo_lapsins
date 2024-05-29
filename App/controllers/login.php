@@ -15,9 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $user = $model->user();
 
   if (!$user || !password_verify($_POST["password"], $user["password"])) {
-    $errors["username"] = "Kaut kas nav labi";
+    $errors["password"] = "Kaut kas nav labi";
   }
-
   if (empty($errors)) {
     $_SESSION["user"] = true;
     $_SESSION["username"] = $_POST["username"];
@@ -26,16 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /");
     die();
   }
-
-  if ($_SESSION["user"] = true){
-    return "../App/views/components/navbar.auth.php";
-  }elseif ($_SESSION["user"] = false){
-    return "../App/views/components/navbar.guest.php";
-  }
-
 }
-
-
 
 $title = "Login";
 require "../App/views/login.view.php";
