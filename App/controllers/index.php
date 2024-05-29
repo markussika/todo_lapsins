@@ -4,10 +4,15 @@ require "../App/models/Todo.php";
 $model = new Todo();
 
 $page = 1;
-$limit = 10*$page;
-$start = $limit - 10;
-$todos = $model->getJoinedAndGroupedTodos($start, $limit);
-
+if(isset($_GET['page']) ) {
+    if($_GET['page'] != 0 && !empty($model)){
+        echo $_GET['page'];
+        $page += $_GET['page']-1;
+    }
+}
+$start = $page*5 - 5;
+$todos = $model->getJoinedAndGroupedTodos($start, 5);
+echo $start." ";    
 
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
     $todos = $model->search();
