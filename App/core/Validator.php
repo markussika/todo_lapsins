@@ -27,6 +27,7 @@ class Validator {
 
    public static function username($data) {
     return filter_var($data);
+    
    }
 
  public static function password($data) {

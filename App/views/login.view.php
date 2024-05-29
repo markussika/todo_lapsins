@@ -11,17 +11,23 @@
         <form method="POST">
         <h2>Login</h2>
 
-        <label for="username">Username:</label>
-        <?php if(isset($errors["username"])) {?>
-    <p class="error"><?= $errors["username"] ?></p>
-  <?php } ?>
-        <input name="username" type="text" placeholder="Username" id="username">
+        <label for="username">Username:
+          <input name="username" type="text" placeholder="Username" id="username">
+          <?php if(isset($errors["username"])) {?>
+            <p class="error"><?= $errors["username"] ?></p>
+          <?php } ?>
+        </label>
 
-        <label for="password">Password:</label>
-        <?php if(isset($errors["password"])) {?>
-    <p><?= $errors["password"] ?></p>
-  <?php } ?>
-        <input name="password" type="password" placeholder="Password" id="password">
+        
+
+        <label for="password">Password:
+          <input name="password" type="password" placeholder="Password" id="password">
+          <?php if(isset($errors["password"])) {?>
+            <p><?= $errors["password"] ?></p>
+          <?php } ?>
+        </label>
+
+
         <input type="submit" name="login-btn" value="Login">
         <a href="/register">Don't have an account?</a>
     </form>      
