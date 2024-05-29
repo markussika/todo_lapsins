@@ -5,7 +5,8 @@ $model = new Todo();
 
 $page = 1;
 $maxpage = intdiv(count($model->all()), 5)+1;
-if(isset($_GET['page']) && $_GET['page'] != 0  && $_GET['page'] > 0) {
+count($model->all())/5 == 1 ? $maxpage =1 : '';
+if(isset($_GET['page']) && $_GET['page'] != 0  && $_GET['page'] > 0 && is_numeric($_GET['page'] )) {
         $_GET['page'] > $maxpage ? $page = $maxpage : $page += $_GET['page']-1;
 }
 $start = $page*5 - 5;
