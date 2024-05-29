@@ -45,8 +45,6 @@
                                 </form>
                             </div>
                         </td>
-                        <td>
-                        </td>
                         <td class="index-end-div">
                             <div class="actions-index td-wrapper index-end-div">
                                 <form action="/edit">
@@ -55,7 +53,7 @@
                                 <form class="delete-form" method="POST" action="/delete">
                                     <button name="id" value="<?= $todo["id"] ?>" class="delete-but">Delete</button>
                                 </form>
-                            </div>
+                            </div>s
                         </td>
                     </tr>
                 <?php } ?>
