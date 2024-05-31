@@ -445,6 +445,7 @@ nav {
   color: #780a0a;
 } */
 .search {
+  padding: 20px 0px;
   display: flex;
   justify-content: center;
 }
