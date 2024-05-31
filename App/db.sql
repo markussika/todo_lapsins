@@ -1,4 +1,3 @@
-
 CREATE DATABASE todo_13;
 
 USE todo_13;
