@@ -11,7 +11,7 @@ $todos = $model->userTodos();
 $users = $model->users();
 $groupedTodos = $model->todojoinAndSorted();
 
-dd();
+
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
     $todos = $model->search();
 }
