@@ -35,13 +35,13 @@ class Validator {
     $minLength = 8;
     
     // Regular expressions for checking password criteria
-    $uppercaseRegex = '/[A-Z]/';
+    
     $lowercaseRegex = '/[a-z]/';
-    $numberRegex = '/[0-9]/';
+    
 
     return  strlen($data) >= $minLength &&
-            preg_match($uppercaseRegex, $data) &&
-            preg_match($lowercaseRegex, $data) &&
-            preg_match($numberRegex, $data);
+            
+            preg_match($lowercaseRegex, $data) :
+            
  }
 }
