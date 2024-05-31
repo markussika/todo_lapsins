@@ -484,3 +484,11 @@ nav {
     font-size: smaller;
   }
 }
+@media (max-width: 375px) {
+  .index-wrapper {
+    width: 103%;
+  }
+  .wrapper {
+    width: 105%;
+  }
+}
