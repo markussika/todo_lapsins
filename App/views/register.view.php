@@ -25,6 +25,7 @@
           <p class="error"><?= $errors["password"] ?></p>
         <?php } ?>
         <input type="submit" name="login-btn" value="Register">
+        <a href="/login" class="no-acc-but">Already have an account?</a>
     </form>      
     </div>
     </div>

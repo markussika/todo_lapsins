@@ -255,7 +255,7 @@ tr:hover .p-wrapper {
 .loginform {
   background: #ffffff;
   width: 450px;
-  color: #002794;
+  color: hsl(224, 100%, 56%);
   margin-top: 50px;
   display: flex;
 
