@@ -487,3 +487,11 @@ nav {
     width: 39vw;
   }
 }
+@media (max-width: 375px) {
+  .index-wrapper {
+    width: 103%;
+  }
+  .wrapper {
+    width: 105%;
+  }
+}
