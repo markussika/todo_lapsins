@@ -5,7 +5,7 @@
         <a class="navbarcol" href="/">Home</a>
         <a class="navbarcol" href="/tasks">Ur tasks</a>
         <a class="navbarcol" href="/create">Add a task</a>
-        <a class="navbarcol" href="/logout">Logout</a>
+        <a class="navbarcol logout-but" href="/logout">Logout</a>
         
     </nav>
 </header>
