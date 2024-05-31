@@ -212,6 +212,7 @@ table {
   z-index: 5;
   visibility: hidden;
   opacity: 0;
+  border: 2px solid rgb(179, 179, 179);
   transition: all 0.2s;
 }
 
@@ -371,6 +372,7 @@ body {
 }
 
 .index-wrapper {
+  position: relative;
   width: 85vw;
   min-height: 100vh;
   background-color: rgb(209, 209, 209);
@@ -410,8 +412,16 @@ body {
   background-color: rgb(233, 237, 255);
 }
 .pagination-wrapper {
+  position: absolute;
   display: flex;
   justify-content: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 100px;
 }
 
 nav {
