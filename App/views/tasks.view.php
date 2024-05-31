@@ -53,7 +53,7 @@
                                 <form class="delete-form" method="POST" action="/delete">
                                     <button name="id" value="<?= $todo["id"] ?>" class="delete-but">Delete</button>
                                 </form>
-                            </div>s
+                            </div>
                         </td>
                     </tr>
                 <?php } ?>
