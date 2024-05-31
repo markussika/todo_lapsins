@@ -15,16 +15,15 @@
         <h2>Register</h2>
 
         <label for="username">Username:</label>
-        <?php if(isset($errors["username"])) {?>
-    <p class="error"><?= $errors["username"] ?></p>
-  <?php } ?>
         <input name="username" type="text" placeholder="Username" id="username">
-
+        <?php if(isset($errors["username"])) {?>
+          <p class="error"><?= $errors["username"] ?></p>
+        <?php } ?>
         <label for="password">Password:</label>
-        <?php if(isset($errors["password"])) {?>
-    <p><?= $errors["password"] ?></p>
-  <?php } ?>
         <input name="password" type="password" placeholder="Password" id="password">
+        <?php if(isset($errors["password"])) {?>
+          <p class="error"><?= $errors["password"] ?></p>
+        <?php } ?>
         <input type="submit" name="login-btn" value="Register">
     </form>      
     </div>

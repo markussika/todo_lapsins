@@ -23,13 +23,13 @@
         <label for="password">Password:
           <input name="password" type="password" placeholder="Password" id="password">
           <?php if(isset($errors["password"])) {?>
-            <p><?= $errors["password"] ?></p>
+            <p class="error"><?= $errors["password"] ?></p>
           <?php } ?>
         </label>
 
 
         <input type="submit" name="login-btn" value="Login">
-        <a href="/register">Don't have an account?</a>
+        <a href="/register" class="no-acc-but">Don't have an account?</a>
     </form>      
     </div>
     </div>

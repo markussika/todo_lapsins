@@ -457,6 +457,16 @@ nav {
   color: red;
 }
 
+.no-acc-but {
+  text-decoration: underline !important;
+}
+
+.error {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: red;
+}
+
 /* papapa */
 
 /* .error {

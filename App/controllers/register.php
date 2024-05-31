@@ -15,23 +15,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $errors = [];
 
   if (!Validator::username($_POST["username"])) {
-    $errors["username"] = "Nepareiz lietotājvārda formāts";
+    $errors["username"] =  "Wrong format";
   }
   if (!Validator::password($_POST["password"])) {
-    $errors["password"] = "Parolē ir nepilnības";
+    $errors["password"] = "Wrong format";
   }
   //PĀRBAUDĪS, VAI datubāzē ir e-pasts
   
   $result = $model->user();
 
   if ($result) {
-    $errors["username"] = "Konts jau pastāv";
+    $errors["username"] = "Account already exists";
   }
 
   if (empty($errors)) {
     $model->createUser();
 
-    $_SESSION["flash"] = "Tu esi veiksmīgi reģistrēts";
+    $_SESSION["flash"] = "You have logged in";
     header("Location: /login");
     die();
   }

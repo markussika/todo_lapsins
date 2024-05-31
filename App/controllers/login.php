@@ -10,12 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $errors = [];
 
   if (!Validator::username($_POST["username"])) {
-    $errors["username"] = "Nepareiz lietotajvarda formāts";
+    $errors["username"] = "Wrong format";
   }
   $user = $model->user();
 
   if (!$user || !password_verify($_POST["password"], $user["password"])) {
-    $errors["password"] = "Kaut kas nav labi";
+    $errors["password"] = "Wrong format";
   }
   if (empty($errors)) {
     $_SESSION["user"] = true;
