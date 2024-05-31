@@ -494,9 +494,9 @@ nav {
 }
 @media (max-width: 375px) {
   .index-wrapper {
-    width: 103%;
+    width: 100%;
   }
   .wrapper {
-    width: 105%;
+    width: 100%;
   }
 }
