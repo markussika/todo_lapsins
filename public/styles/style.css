@@ -145,7 +145,7 @@ td {
 table {
   border-collapse: separate;
   border-spacing: 0 5px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -482,5 +482,8 @@ nav {
   }
   .index-tr > th {
     font-size: smaller;
+  }
+  .p-wrapper {
+    width: 39vw;
   }
 }
