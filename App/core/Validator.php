@@ -41,7 +41,7 @@ class Validator {
 
     return  strlen($data) >= $minLength &&
             
-            preg_match($lowercaseRegex, $data) :
+            preg_match($lowercaseRegex, $data) ;
             
  }
 }
