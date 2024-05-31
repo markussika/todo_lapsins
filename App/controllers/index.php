@@ -10,7 +10,7 @@ if(isset($_GET['page']) && $_GET['page'] != 0  && $_GET['page'] > 0 && is_numeri
         $_GET['page'] > $maxpage ? $page = $maxpage : $page += $_GET['page']-1;
 }
 $start = $page*5 - 5;
-$todos = $model->getJoinedAndGroupedTodos($start, 5);
+$todos = $model->getJoinedAndGroupedTodos($start, 7);
 
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
     $todos = $model->search();
