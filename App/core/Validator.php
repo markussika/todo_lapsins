@@ -32,7 +32,7 @@ class Validator {
 
  public static function password($data) {
     // Minimum length requirement
-    $minLength = 8;
+    $minLength = 5;
     
     // Regular expressions for checking password criteria
     
