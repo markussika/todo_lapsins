@@ -75,7 +75,7 @@
 
 <div class="pagination-wrapper">
     <a href="?page=<?= $page - 1 ?>" class="pagination">Previous</a>
-    <p class="pagination"><?= $page?></p>
+    <a class="pagination" href="javascript:window.location.href=window.location.href"><?= $page?></a>
     <a href="?page=<?= $page + 1 ?>" class="pagination">Next</a>
 </div>
 <?php } else { ?>
