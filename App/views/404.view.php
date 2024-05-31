@@ -6,9 +6,10 @@
      } ?>
 <style>
 body{
-     background-image: url(../public/veri_gud_painting.jpg);
+     background-image: url(public/styles/img/veri_gud_painting.jpg);
      background-repeat: no-repeat;
-     height: 100%;
+     height: 100vh;
+     width: 100vw;
      background-size: cover;
 }
 
