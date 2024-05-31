@@ -466,6 +466,9 @@ nav {
     border-radius: 15px;
     border: 2px solid rgb(196, 196, 196);
   }
+  .index-wrapper {
+    width: 100%;
+  }
 
   nav {
     margin-left: 20px;
