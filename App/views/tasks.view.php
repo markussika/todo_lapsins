@@ -13,7 +13,7 @@
 
 
 ?>
-
+<div class="wrapper">
 <div class="index-wrapper">
 <?php if (!empty($groupedTodos)) { ?>
     <?php foreach ($groupedTodos as $dueDate => $todos) { ?>
@@ -63,6 +63,7 @@
 <?php } else { ?>
     <p>NO TODOS</p>
 <?php } ?>
+</div>
 </div>
 
 <?php require "../App/views/components/footer.php" ?>
