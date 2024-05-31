@@ -95,7 +95,7 @@ require "../App/core/Database.php";
         
         public function search(){
             $search = $_POST["search"];
-            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name OR description LIKE :search; AND name IS NOT NULL ;";
+            $query = "SELECT * FROM users LEFT JOIN todos ON users.id = todos.user_id WHERE name LIKE :search OR description LIKE :search AND name IS NOT NULL ;";
             $params = [":search" => "%{$search}%"];
             return $this->db->execute($query, $params)->fetchAll();
         }
