@@ -347,6 +347,7 @@ nav {
   z-index: 6;
 }
 .navbarcol {
+  padding: 10px 0px;
   transition: transform 250ms;
   color: honeydew;
   text-decoration: none;
