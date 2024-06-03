@@ -120,4 +120,9 @@ require "../App/core/Database.php";
             }
             return $groupedTodos;
         }
+        public function users(){
+            $query = "SELECT * FROM users";
+            $params = [];
+            return $this->db->execute($query, $params)->fetchAll();
+        }
     }
