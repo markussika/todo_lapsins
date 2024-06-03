@@ -15,7 +15,7 @@
         <h2>Register</h2>
 
         <label for="username">Username:</label>
-        <input name="username" type="text" placeholder="Username" id="username">
+        <input name="username" type="text" placeholder="Username" id="username" value="<?= $_POST["username"] ?? "" ?>">
         <?php if(isset($errors["username"])) {?>
           <p class="error"><?= $errors["username"] ?></p>
         <?php } ?>

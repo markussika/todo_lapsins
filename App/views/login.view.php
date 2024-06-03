@@ -12,7 +12,7 @@
         <h2>Login</h2>
 
         <label for="username">Username:
-          <input name="username" type="text" placeholder="Username" id="username">
+          <input name="username" type="text" placeholder="Username" id="username" value="<?= $_POST["username"] ?? "" ?>">
           <?php if(isset($errors["username"])) {?>
             <p class="error"><?= $errors["username"] ?></p>
           <?php } ?>
