@@ -4,13 +4,14 @@ require "../App/models/Todo.php";
 $model = new Todo();
 
 $page = 1;
-$maxpage = intdiv(count($model->all()), 5)+1;
-count($model->all())/5 == 1 ? $maxpage =1 : '';
+$limit = 7;
+$maxpage = intdiv(count($model->all()), $limit)+1;
+count($model->all())/$limit == 1 ? $maxpage =1 : '';
 if(isset($_GET['page']) && $_GET['page'] != 0  && $_GET['page'] > 0 && is_numeric($_GET['page'] )) {
         $_GET['page'] > $maxpage ? $page = $maxpage : $page += $_GET['page']-1;
 }
-$start = $page*5 - 5;
-$todos = $model->getJoinedAndGroupedTodos($start, 7);
+$start = $page*$limit - $limit;
+$todos = $model->getJoinedAndGroupedTodos($start, $limit);
 
 if (isset($_POST["search"]) && !empty(trim($_POST["search"]))) {
     $todos = $model->search();
