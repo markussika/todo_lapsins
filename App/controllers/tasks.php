@@ -8,7 +8,6 @@ require "../App/models/Todo.php";
 
 $model = new Todo();
 $todos = $model->userTodos();
-$users = $model->users();
 $groupedTodos = $model->todojoinAndSorted();
 
 
